@@ -4,7 +4,7 @@
 # Version:     1.0
 #-------------------------------------------------------------------------------
 
-from SystemsTestNew import *
+from SystemsTest import *
 
 #Test all systems
 SystemsTest("help")
