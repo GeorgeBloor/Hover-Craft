@@ -12,5 +12,5 @@ If the systems function is passed "all" all systes will be checked without
 further user input
 """
 #Test all systems
-SystemsTest("ALdL")
+SystemsTest("ALL")
 

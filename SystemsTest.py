@@ -5,6 +5,7 @@
 #-------------------------------------------------------------------------------
 
 def SystemsTest(SYSTEMS="All"):
+    print("\nSYSTEMS TEST INITIATED\n")
 #Defining Structures
     SystemsToTest = []
     SystemNotTest = []
@@ -14,13 +15,13 @@ def SystemsTest(SYSTEMS="All"):
     def SystemSpecificTest(System):
         #Print Statemants placeholders for code
         if System=="lift":
-            print("Doing lift test")
+            print("LIFT CODE HERE")
             return
         if System=="rudder":
-            print("Doing rudder test")
+            print("RUDDER CODE HERE")
             return
         if System=="thrust":
-            print("Doing thrust test")
+            print("THRUST CODE HERE")
             return
         return
 
@@ -39,17 +40,17 @@ def SystemsTest(SYSTEMS="All"):
 
 #Printing to aid user
     if len(SystemsToTest) != 0:
-        print("Testing")
+        print("\n###    Testing    ###")
         for i in range(len(SystemsToTest)):
             print(SystemsToTest[i])
     if len(SystemNotTest) != 0:
-        print("Not Testing")
+        print("\n###    Not Testing    ###")
         for i in range(len(SystemNotTest)):
             print(SystemNotTest[i])
+            print
 #Looping through systems
     for i in range(len(SystemsToTest)):
         SystemSpecificTest(SystemsToTest[i])
-
 
 #BEFORE PUSHING CODE COMMENT OUT BELOW LINE
 #SystemsTest(SYSTEMS="ALL")
