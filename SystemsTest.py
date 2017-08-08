@@ -44,12 +44,14 @@ def SystemsTest(SYSTEMS=["lift", "rudder", "thrust"]):
         if AllSystems[i] not in SystemsToTest:
             SystemNotTest.append(AllSystems[i])
 
-    print("The following are invalid systems ==> {}".format(InvalidSystems))
-    print("The following are systems that wont be tested==> {}".format(SystemNotTest))
+    if len(InvalidSystems) > 0:
+        print("The following are invalid systems ==> {}".format(InvalidSystems))
+    if len(SystemNotTest) > 0:
+        print("The following are systems that wont be tested==> {}".format(SystemNotTest))
     print("\n###    TESTING  ==>{}    ###\n".format(SystemsToTest))
 
 #Looping through systems
     for i in range(len(SystemsToTest)):
         SystemSpecificTest(SystemsToTest[i])
 
-#SystemsTest(["pedals","lift","seat","Ruddesr","rudder","thrust"])
+SystemsTest(["pedals","seat","Ruddesr","rudder","thrust"])
